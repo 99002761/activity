@@ -1,11 +1,24 @@
-# Makefile - Version 1
+# Name of the project
+PROJECT_NAME = function
 
-# Regular compilation command, just as it would be written on
-# the command line
-fibmake: fibmake.c fibfunc.c
-	gcc -o fibmake fibmake.c fibfunc.c
+# Output directory
+BUILD = build
 
-# Target to clean files created during compilation
-clean:
-	rm -f *.o fibmake Makefile
-	mv Makefile.orig Makefile
+# All source code files
+SRC = hello.c
+
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+# Default target built
+$(PROJECT_NAME):all
+
+all: $(SRC) $(BUILD)
+	gcc $(SRC)  -o $(PROJECT_OUTPUT).out -lm
+
+# Call `make run` to run the application
+run:$(PROJECT_NAME)
+	./$(PROJECT_OUTPUT).out
+
+# Create new build folder if not present
+$(BUILD):
+	mkdir build
