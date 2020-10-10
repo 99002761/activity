@@ -5,7 +5,7 @@ PROJECT_NAME = function
 BUILD = build
 
 # All source code files
-SRC = fibmake.c
+SRC = demo.c
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
