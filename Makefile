@@ -1,7 +1,7 @@
 # Name of the Project
 PROJECT_NAME = function
 
-# Output directory
+# Output  directory
 BUILD = build
 
 # All source code files
