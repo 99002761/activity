@@ -1,4 +1,4 @@
-# Name of the project
+# Name of the Project
 PROJECT_NAME = function
 
 # Output directory
